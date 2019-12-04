@@ -14,12 +14,10 @@ public class FindNumbers {
      */
     public int[] getAllNumbers(String text) {
         int[] numbers = null;
-        if ((text != null) && (text.isEmpty() != true)) {
-            String[] s = text.replaceAll("[^-0-9]+", " ").trim().split(" ");
-            numbers = new int[s.length];
-            for (int i = 0; i < s.length; i++) {
-                numbers[i] = Integer.parseInt(s[i]) * 2;
-            }
+        String[] s = text.replaceAll("[^-0-9]+", " ").trim().split(" ");
+        numbers = new int[s.length];
+        for (int i = 0; i < s.length; i++) {
+            numbers[i] = Integer.parseInt(s[i]) * 2;
         }
         return numbers;
     }
